@@ -21,7 +21,17 @@ Each employee can:
 
 call your class Employee and receive all the data in the constructor in the order listed
 */
-
+class Employee {
+    constructor(firstName,lastName,email,age){
+        this.first_name = firstName;
+        this.last_name = lastName;
+        this.email = email;
+        this.age = age;
+    }
+    makeWidget() {
+        return this.first_name + " " + this.last_name + " Widget" ;
+    }
+}
 
 
 /*
@@ -41,7 +51,24 @@ call your class Manager
 
 */
 
-
+class Manager {
+    constructor(firstName,lastName,email,age){
+        this.first_name = firstName;
+        this.last_name = lastName;
+        this.email = email;
+        this.age = age;
+        this.reports = []
+    }
+    makeWidget() {
+        return this.first_name + " " + this.last_name + " Widget" ;
+    }
+    hire(newEmployee) {
+        this.reports.push(newEmployee)
+    }
+    fire(index) {
+        this.reports.splice(index, 1)
+    }
+}
 
 
 
